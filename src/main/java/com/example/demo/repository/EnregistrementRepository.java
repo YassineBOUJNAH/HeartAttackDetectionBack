@@ -14,6 +14,9 @@ public interface EnregistrementRepository extends CrudRepository<Enregistrement,
 	@Query("SELECT e FROM Enregistrement e WHERE e.id = (SELECT MAX(id) FROM Enregistrement)")
 	Enregistrement findEnregistrementActuel();
 	
+	@Query("SELECT count(e) FROM Enregistrement e")
+	int findCountEnregistrements();
+	
 	@Query("SELECT target FROM Enregistrement")
 	List<Integer> findScoreData();
 
