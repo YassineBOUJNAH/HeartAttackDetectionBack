@@ -22,7 +22,7 @@ public class EnregistrementService {
 		int cp = random.nextInt(4) + 1;
 		int thalach = random.nextInt(200);
 		float oldpeak = random.nextFloat();
-		int slope = random.nextInt(7);
+		int slope = random.nextInt(3) + 1;
 		int ca = random.nextInt(10);
 		int target = random.nextInt(2);
 
@@ -36,11 +36,6 @@ public class EnregistrementService {
 
 	public Enregistrement getEnregistrementActuel() {
 		return enregistrementRepository.findEnregistrementActuel();
-	}
-
-	// Get Data Score
-	public List<Integer> getScoreData() {
-		return enregistrementRepository.findScoreData();
 	}
 
 	public int getTotalMeasures() {

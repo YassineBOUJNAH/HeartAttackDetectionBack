@@ -35,11 +35,6 @@ public class EnregistrementController {
 		return enregistrementService.getEnregistrementActuel();
 	}
 
-	@GetMapping("/scoreData")
-	public List<Integer> getScoreData() {
-		return enregistrementService.getScoreData();
-	}
-
 	@GetMapping("/totalData")
 	public int getTotalMeasures() {
 		return enregistrementService.getTotalMeasures();
