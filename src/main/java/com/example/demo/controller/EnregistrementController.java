@@ -44,5 +44,10 @@ public class EnregistrementController {
 	public int getTotalMeasures() {
 		return enregistrementService.getTotalMeasures();
 	}
+	
+	@GetMapping("/heartRates")
+	public List<Integer> getHeartRates() {
+		return enregistrementService.getHeartRates();
+	}
 
 }

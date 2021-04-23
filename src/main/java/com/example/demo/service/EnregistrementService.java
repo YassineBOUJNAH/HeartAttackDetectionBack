@@ -51,4 +51,9 @@ public class EnregistrementService {
 		return enregistrementRepository.findCountEnregistrements();
 	}
 
+	// Get heart rates
+	public List<Integer> getHeartRates() {
+		return enregistrementRepository.findHeartRate();
+	}
+
 }

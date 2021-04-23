@@ -19,5 +19,8 @@ public interface EnregistrementRepository extends CrudRepository<Enregistrement,
 	
 	@Query("SELECT target FROM Enregistrement")
 	List<Integer> findScoreData();
+	
+	@Query("SELECT thalach FROM Enregistrement")
+	List<Integer> findHeartRate();
 
 }
