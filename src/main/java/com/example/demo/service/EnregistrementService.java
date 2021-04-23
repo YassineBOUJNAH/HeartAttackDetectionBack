@@ -15,12 +15,11 @@ public class EnregistrementService {
 	@Autowired
 	private EnregistrementRepository enregistrementRepository;
 
-	// Generate Random Data
 	public Enregistrement generateData() {
 
 		Random random = new Random();
 		int sex = random.nextInt(2);
-		int cp = random.nextInt(5);
+		int cp = random.nextInt(4) + 1;
 		int thalach = random.nextInt(200);
 		float oldpeak = random.nextFloat();
 		int slope = random.nextInt(7);
@@ -31,12 +30,10 @@ public class EnregistrementService {
 		return enregistrementRepository.save(enregistrement);
 	}
 
-	// Get All Enregistrement
 	public List<Enregistrement> getAllEnregistrement() {
 		return (List<Enregistrement>) enregistrementRepository.findAll();
 	}
 
-	// Get Last Enregistrement
 	public Enregistrement getEnregistrementActuel() {
 		return enregistrementRepository.findEnregistrementActuel();
 	}
@@ -46,12 +43,10 @@ public class EnregistrementService {
 		return enregistrementRepository.findScoreData();
 	}
 
-	// Get total of measures
 	public int getTotalMeasures() {
 		return enregistrementRepository.findCountEnregistrements();
 	}
 
-	// Get heart rates
 	public List<Integer> getHeartRates() {
 		return enregistrementRepository.findHeartRate();
 	}
