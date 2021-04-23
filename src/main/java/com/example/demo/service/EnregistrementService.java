@@ -25,7 +25,7 @@ public class EnregistrementService {
 		float oldpeak = random.nextFloat();
 		int slope = random.nextInt(7);
 		int ca = random.nextInt(10);
-		int target = random.nextInt(200);
+		int target = random.nextInt(2);
 
 		Enregistrement enregistrement = new Enregistrement(sex, cp, thalach, oldpeak, slope, ca, target);
 		return enregistrementRepository.save(enregistrement);

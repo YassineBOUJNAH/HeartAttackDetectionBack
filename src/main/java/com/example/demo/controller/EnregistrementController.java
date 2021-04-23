@@ -20,7 +20,7 @@ public class EnregistrementController {
 	@Autowired
 	private EnregistrementService enregistrementService;
 
-	@PostMapping("/save-enregistrement")
+	@PostMapping("/saveEnregistrement")
 	public Enregistrement generateData() {
 		return enregistrementService.generateData();
 	}
@@ -30,17 +30,17 @@ public class EnregistrementController {
 		return enregistrementService.getAllEnregistrement();
 	}
 
-	@GetMapping("/enregistrement-actuel")
+	@GetMapping("/enregistrementActuel")
 	public Enregistrement getEnregistrementActuel() {
 		return enregistrementService.getEnregistrementActuel();
 	}
 
-	@GetMapping("/score-data")
+	@GetMapping("/scoreData")
 	public List<Integer> getScoreData() {
 		return enregistrementService.getScoreData();
 	}
 
-	@GetMapping("/total-data")
+	@GetMapping("/totalData")
 	public int getTotalMeasures() {
 		return enregistrementService.getTotalMeasures();
 	}
